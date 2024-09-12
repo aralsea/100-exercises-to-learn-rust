@@ -18,7 +18,6 @@ impl IsEven for i32 {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

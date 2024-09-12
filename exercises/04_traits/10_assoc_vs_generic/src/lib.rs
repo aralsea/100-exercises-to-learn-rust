@@ -14,21 +14,21 @@
 // implementations manually. Venture further only if you're curious.
 
 trait Power<T> {
-    fn power(self, n:T) -> Self;
+    fn power(self, n: T) -> Self;
 }
 
 impl Power<u16> for u32 {
-    fn power(self, n:u16) -> Self {
+    fn power(self, n: u16) -> Self {
         self.pow(n.into())
     }
 }
 impl Power<u32> for u32 {
-    fn power(self, n:u32) -> Self {
+    fn power(self, n: u32) -> Self {
         self.pow(n)
     }
 }
 impl Power<&u32> for u32 {
-    fn power(self, n:&u32) -> Self {
+    fn power(self, n: &u32) -> Self {
         self.pow(*n)
     }
 }

@@ -15,11 +15,11 @@
 pub struct Order {
     product_name: String,
     quantity: u32,
-    unit_price: u32
+    unit_price: u32,
 }
 
 impl Order {
-    pub fn new(product_name:String, quantity:u32, unit_price:u32) -> Self {
+    pub fn new(product_name: String, quantity: u32, unit_price: u32) -> Self {
         if product_name.is_empty() {
             panic!();
         }
@@ -39,7 +39,7 @@ impl Order {
         }
     }
 
-    pub fn total(&self)->u32 {
+    pub fn total(&self) -> u32 {
         self.quantity * self.unit_price
     }
 
@@ -55,7 +55,7 @@ impl Order {
         &self.unit_price
     }
 
-    pub fn set_product_name(&mut self, new_product_name:String){
+    pub fn set_product_name(&mut self, new_product_name: String) {
         if new_product_name.is_empty() {
             panic!();
         }
@@ -65,14 +65,14 @@ impl Order {
         self.product_name = new_product_name;
     }
 
-    pub fn set_quantity(&mut self, new_quantity:u32) {
+    pub fn set_quantity(&mut self, new_quantity: u32) {
         if new_quantity == 0 {
             panic!();
         }
         self.quantity = new_quantity;
     }
 
-    pub fn set_unit_price(&mut self, new_unit_price:u32) {
+    pub fn set_unit_price(&mut self, new_unit_price: u32) {
         if new_unit_price == 0 {
             panic!();
         }

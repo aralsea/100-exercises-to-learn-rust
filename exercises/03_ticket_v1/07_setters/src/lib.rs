@@ -46,7 +46,7 @@ impl Ticket {
         &self.status
     }
 
-    pub fn set_title(&mut self, new_title:String){
+    pub fn set_title(&mut self, new_title: String) {
         if new_title.is_empty() {
             panic!("Title cannot be empty");
         }
@@ -56,7 +56,7 @@ impl Ticket {
         self.title = new_title
     }
 
-    pub fn set_description(&mut self, new_description:String){
+    pub fn set_description(&mut self, new_description: String) {
         if new_description.is_empty() {
             panic!("Description cannot be empty");
         }
@@ -66,7 +66,7 @@ impl Ticket {
         self.description = new_description
     }
 
-    pub fn set_status(&mut self, new_status:String){
+    pub fn set_status(&mut self, new_status: String) {
         if new_status != "To-Do" && new_status != "In Progress" && new_status != "Done" {
             panic!("Only `To-Do`, `In Progress`, and `Done` statuses are allowed");
         }

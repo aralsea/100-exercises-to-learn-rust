@@ -6,13 +6,13 @@
 // greater than 0, otherwise `false`.
 
 struct Order {
-    price: u32, 
+    price: u32,
     quantity: u32,
 }
 
 impl Order {
     fn is_available(self) -> bool {
-        return self.quantity > 0
+        return self.quantity > 0;
     }
 }
 
