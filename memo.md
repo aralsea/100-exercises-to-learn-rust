@@ -44,3 +44,5 @@
 ## パターン
 - match文の=>の左側に置かれる部分を、パターンという。
 - 式は値を生成し、パターンは値を消費する。
+- ただし、参照に対するパターンマッチでは https://rust-lang.github.io/rfcs/2005-match-ergonomics.html にある `match ergonomics` が発動することに注意。ネストした参照に対してちょっと変な挙動をする。
+https://frozenlib.net/blog/2018-12-18_rust-pattern-match-2/ も参照。
