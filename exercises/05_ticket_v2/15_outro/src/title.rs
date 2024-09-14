@@ -6,9 +6,8 @@ use thiserror;
 #[derive(Debug, PartialEq, Clone)]
 pub struct TicketTitle(String);
 
-
 #[derive(thiserror::Error, Debug)]
-pub enum TicketTitleError{
+pub enum TicketTitleError {
     #[error("The title cannot be empty")]
     Empty,
     #[error("The title cannot be longer than 50 bytes")]
@@ -29,17 +28,15 @@ impl TryFrom<String> for TicketTitle {
     }
 }
 
-
-fn validate(value:&str) -> Result<(), TicketTitleError> {
-        if value.is_empty() {
-            return Err(TicketTitleError::Empty);
-        } else if value.len() > 50 {
-            return Err(TicketTitleError::TooLong);
-        } else {
-            return Ok(());
-        }
+fn validate(value: &str) -> Result<(), TicketTitleError> {
+    if value.is_empty() {
+        return Err(TicketTitleError::Empty);
+    } else if value.len() > 50 {
+        return Err(TicketTitleError::TooLong);
+    } else {
+        return Ok(());
+    }
 }
-
 
 #[cfg(test)]
 mod tests {

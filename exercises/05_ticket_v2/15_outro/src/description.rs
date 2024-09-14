@@ -6,9 +6,8 @@ use thiserror;
 #[derive(Debug, PartialEq, Clone)]
 pub struct TicketDescription(String);
 
-
 #[derive(thiserror::Error, Debug)]
-pub enum TicketDescriptionError{
+pub enum TicketDescriptionError {
     #[error("The description cannot be empty")]
     Empty,
     #[error("The description cannot be longer than 500 bytes")]
@@ -30,17 +29,15 @@ impl TryFrom<String> for TicketDescription {
     }
 }
 
-fn validate(value:&str) -> Result<(), TicketDescriptionError> {
-        if value.is_empty() {
-            return Err(TicketDescriptionError::Empty);
-        } else if value.len() > 500 {
-            return Err(TicketDescriptionError::TooLong);
-        } else {
-            return Ok(());
-        }
+fn validate(value: &str) -> Result<(), TicketDescriptionError> {
+    if value.is_empty() {
+        return Err(TicketDescriptionError::Empty);
+    } else if value.len() > 500 {
+        return Err(TicketDescriptionError::TooLong);
+    } else {
+        return Ok(());
+    }
 }
-
-
 
 #[cfg(test)]
 mod tests {

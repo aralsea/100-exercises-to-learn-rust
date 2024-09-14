@@ -38,7 +38,6 @@ impl TryFrom<String> for Status {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
