@@ -10,6 +10,8 @@
 ## 参照と借用
 - 所有権システムがあるので、pythonみたいに何も考えずに関数に変数の値を渡したりすると呼び出し元でその変数が使えなくなる、みたいなことが起きる。
 - これは嫌なので、参照を利用する。
+- 参照を作成することを`借用`という。(https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
+  - > We call the action of creating a reference borrowing. As in real life, ...
 - shared xor mutableの原則
     - ある変数への参照は、複数の不変参照もしくは1つの可変参照のどちらか一方の状況のみが許容される。
 - 参照のサイズは基本的に1 word（32bit コンピュータなら32bit = 4byte, 64bitなら64bit = 8byte）
